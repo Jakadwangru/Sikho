@@ -1,0 +1,107 @@
+body {
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.course {
+  width: calc(33% - 20px);
+  /* Adjust for margins */
+  background-color: #eee;
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.course h2 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.course a {
+  display: block;
+  background-color: #333;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.course a:hover {
+  background-color: #444;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+/* Media Queries for Responsiveness (Adjust as needed) */
+@media (max-width: 768px) {
+  .course {
+    width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .course {
+    width: 100%;
+  }
+}
+p a{
+  text-decoration: none;
+  color: black;
+}
+header {
+  color: darkslategray;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  
+}
+ul li{
+  list-style-type: none;
+  background-color: lightgray;
+  padding: 0;
+  margin: 4;
+  display: inline;
+  
+  
+}
+ul li a{
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  margin: 18px;
+  padding: 10px;
+}
+.option-language-select{
+  height: 30px;
+  width: 100px;
+  color: darkslategray;
+  font-family: 'Courier New', Courier, monospace;
+}
+button a{
+  text-decoration: none;
+  color: slategray;
+}
