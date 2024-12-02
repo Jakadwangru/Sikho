@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Code Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f4f8;
+            margin: 0;
+        }
+        #randomCode {
+            font-size: 32px;
+            font-weight: bold;
+            color: #333;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div id="randomCode"></div>
+
+    <script>
+        function generateRandomCode() {
+            const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            const numbers = '0123456789';
+            
+            let result = '';
+            
+            // Generate 5 random capital letters
+            for (let i = 0; i < 5; i++) {
+                result += letters.charAt(Math.floor(Math.random() * letters.length));
+            }
+
+            // Generate 4 random numbers
+            for (let i = 0; i < 4; i++) {
+                result += numbers.charAt(Math.floor(Math.random() * numbers.length));
+            }
+
+            // Generate 1 last random capital letter
+            result += letters.charAt(Math.floor(Math.random() * letters.length));
+
+            // Display the result in the div
+            document.getElementById('randomCode').innerText = result;
+        }
+
+        // Generate the random code when the page loads
+        window.onload = generateRandomCode;
+    </script>
+</body>
+</html>
